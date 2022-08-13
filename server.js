@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const PORT = 4000;
 const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
 const postRoute = require("./routes/posts");
@@ -31,4 +30,6 @@ app.use("/api/upload", uploadRoute);
 //   res.send("hello express");
 // });
 
-app.listen(PORT, () => console.log("サーバーが起動しました"));
+app.listen(process.env.PORT || 4000, () =>
+  console.log("サーバーが起動しました")
+);
