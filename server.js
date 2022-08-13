@@ -30,6 +30,4 @@ app.use("/api/upload", uploadRoute);
 //   res.send("hello express");
 // });
 
-app.listen(process.env.PORT || 4000, () =>
-  console.log("サーバーが起動しました")
-);
+app.listen(4000, () => console.log("サーバーが起動しました"));
